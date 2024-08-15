@@ -1,0 +1,84 @@
+// Set colour variables
+:root {
+// Brand Colors
+    // White
+    --rgb-white: 255,255,255;
+    --hsl-white: 0,0,100;
+    --hex-white: ffffff;
+    // Rich Black
+    --rgb-rich-black: 13,19,33;
+    --hsl-rich-black: 222,43,9;
+    --hex-rich-black: 0d1321;
+    --rgb-black: var(--rgb-rich-black);
+    // Prussian Blue
+    --rgb-prussian-blue: 29,45,68;
+    --hsl-prussian-blue: 215,40,19;
+    --hex-prussian-blue: 1d2d44;
+    // Pearl
+    --rgb-pearl: 231,223,198;
+    --hsl-pearl: 45,41,84;
+    --hex-pearl: e7dfc6;
+    // Mountbatten Pink
+    --rgb-mountbatten-pink: 137,105,120;
+    --hsl-mountbatten-pink: 332,13,47;
+    --hex-mountbatten-pink: 896978;
+// Indicators
+    // Good / success
+    --rgb-light-green: 112,238,156;
+    --hsl-light-green: 141,79,69;
+    --hex-light-green: 70ee9c;
+    // Warning
+    --rgb-sunglow: 255,210,63;
+    --hsl-sunglow: 46,100,62;
+    --hex-sunglow: ffd23f;
+    // Error / failure
+    --rgb-crimson: 214,40,57;
+    --hsl-crimson: 354,69,50;
+    --hex-crimson: d62839;
+// Visualisations
+    // Puce
+    --hex-puce: bd8b9c;
+}
+
+// Set theme variables
+:root {
+    --background: rgb(var(--rgb-white),1);
+    --secondary-background: rgb(var(--rgb-pearl),1);
+    --foreground: rgb(var(--rgb-black),1);
+    --white: rgb(var(--rgb-white),1);
+    --black: rgb(var(--rgb-black),1);
+    --primary: rgb(var(--rgb-prussian-blue),1);
+
+    --confirm: rgb(var(--rgb-light-green),1);
+    --success: rgb(var(--rgb-light-green),1);
+    --warning: rgb(var(--rgb-sunglow),1);
+    --remove: rgb(var(--rgb-crimson),1);
+    --error: rgb(var(--rgb-crimson),1);
+
+    --dark: rgb(var(--rgb-prussian-blue));
+    --mid: rgb(var(--rgb-mountbatten-pink));
+    --light: rgb(var(--rgb-white));
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: rgb(var(--rgb-prussian-blue),1);
+        --foreground: rgb(var(--rgb-mint-cream),1);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        color-scheme: dark;
+    }
+}
+
+// Assign theme variables
+html {
+    background: none;
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+}

@@ -1,0 +1,11 @@
+.container {
+    grid-template-columns: 1fr auto auto;
+    padding: 2em 5dvw;
+    background: rgb(var(--rgb-pearl), 0.3);
+    color: var(--dark);
+
+    .acknowledgement {
+        font-weight: 600;
+        padding-inline: 1em;
+    }
+}

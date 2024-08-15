@@ -76,27 +76,8 @@ export default async function Page () {
                 <section className={styles.voice}>
                     <h3>Voice</h3>
                     <div>
-                        <h4>Sans Serif</h4>
-                        <span className={styles.bold}>Public Sans</span>
-                        <div>
-                            <span>Light | 200</span>
-                            <span className={styles.light}>ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
-                            <span className={styles.light}>abcdefghijklmnopqrstuvwxyz</span>
-                        </div>
-                        <div>
-                            <span>Medium | 400</span>
-                            <span className={styles.medium}>ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
-                            <span className={styles.medium}>abcdefghijklmnopqrstuvwxyz</span>
-                        </div>
-                        <div>
-                            <span>Bold | 600</span>
-                            <span className={styles.bold}>ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
-                            <span className={styles.bold}>abcdefghijklmnopqrstuvwxyz</span>
-                        </div>
                     </div>
                     <div>
-                        <h4>Icons</h4>
-                        <span className={styles.bold}>Material Symbols</span>
                     </div>
                 </section>
             </div>

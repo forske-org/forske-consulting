@@ -1,0 +1,14 @@
+.container {
+    grid-template-columns: minmax(auto, 100%) 1fr;
+
+    input {
+        padding: 0.5em 1em;
+        border-radius: 1em;
+        border: 0.1px solid rgb(0,0,0,0.1);
+        place-content: start;
+        overflow: hidden;
+        resize: none;
+        margin-left: 1em;
+        height: 2em;
+    }
+}

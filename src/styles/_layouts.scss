@@ -1,0 +1,36 @@
+html,
+body {
+    max-width: 100dvw;
+    min-height: 100dvh;
+    display: grid;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'header' 'body' 'footer';
+    position: relative;
+
+    header { grid-area: header; }
+    main {
+        grid-area: body;
+        padding: 10em 2em 2em 2em;
+        place-items: start center;
+    }
+    footer { grid-area: footer; }
+
+    * {
+        display: grid;
+    }
+
+    script {
+        display: none !important;
+    }
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,73 @@
+.container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    place-items: center start;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto 1fr auto;
+    gap: 1em;
+    padding-inline: 10dvw;
+    height: 7em;
+    background: var(--primary);
+    box-shadow: var(--foreground) 0 0 1em 0;
+    color: rgb(var(--rgb-white));
+
+    img {
+        border-radius: 50%;
+    }
+
+    .title {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 'name translation' 'meaning meaning';
+        padding-right: 4rem;
+
+        .name {
+            font-size: 3rem;
+            place-self: start;
+            grid-area: name;
+        }
+
+        .translation,
+        .meaning {
+            font-size: 1rem;
+        }
+
+        .translation {
+            place-self: end start;
+            grid-area: translation;
+            padding: 0.4rem 1rem;
+        }
+
+        .meaning {
+            margin-left: 4rem;
+            grid-area: meaning;
+        }
+    }
+
+    .logo {
+        width: 5em;
+        height: 5em;
+        margin-right: 3em;
+    }
+
+    .profilePicture {
+        position: absolute;
+        border: 2px solid rgba(37,37,37,0.1);
+        background: rgb(var(--rgb-white));
+        box-shadow: var(--foreground) 0 0.2em 1em 0;
+        top: calc(7em - 3em);
+        right: clamp(2em, 20dvw, 10em);
+        width: 6em;
+        height: 6em;
+    }
+}
+
+.navigator {
+    grid-template-columns: repeat(5, auto);
+    gap: 1.2em;
+    padding-inline: 2em;
+}
+
+@media screen and (min-width: 1500px)

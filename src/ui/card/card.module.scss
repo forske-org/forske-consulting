@@ -1,0 +1,26 @@
+.container {
+    background: var(--secondary-background);
+    grid-template-rows: repeat(2, auto) 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'image' 'title' 'description';
+    gap: 0.5em;
+    padding: 1em 1.5em;
+    place-items: center;
+
+    .title {
+        font-size: 1.2em;
+        grid-area: title;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .description {
+        grid-area: description;
+        text-align: left;
+        place-self: start;
+    }
+
+    .image {
+        grid-area: image;
+    }
+}
