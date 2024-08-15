@@ -1,0 +1,56 @@
+.container {
+    place-self: start center;
+    min-width: 40dvw;
+    max-width: 80ch;
+    padding-top: 3em;
+    gap: 2em;
+}
+
+.whenGroup {
+    place-self: center;
+    grid-template-columns: repeat(2, auto);
+    gap: 2em;
+}
+
+.attendees,
+.items {
+    grid-template-columns: repeat(2, auto) 1fr;
+    grid-template-columns: 1fr;
+    place-items: start stretch;
+    gap: 0.5em;
+
+    .header {
+        grid-template-columns: repeat(2, auto) 1fr;
+        gap: 1em;
+        padding: 1em 2em;
+
+        .title {
+            opacity: 0.8;
+            place-content: center start;
+        }
+
+        .add {
+            cursor: pointer;
+            place-items: start;
+        }
+    }
+
+    .attendee,
+    .item,
+    .action {
+        gap: 1em;
+    }
+
+    .attendee {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .item {
+        grid-template-columns: 6ch 1fr 2fr;
+    }
+}
+
+.buttons {
+    place-content: center;
+    grid-template-columns: repeat(auto-fit, 14ch);
+}

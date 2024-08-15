@@ -1,0 +1,16 @@
+.services {
+    > * {
+        place-self: start center;
+        width: 80dvw;
+        max-width: 90ch;
+    }
+
+    .tiles {
+        grid-template-columns: repeat(auto-fill, 26ch);
+        place-content: start center;
+        gap: 1em;
+        background: var(--secondary);
+        margin: 1em 0;
+        padding-inline: 1em;
+    }
+}
