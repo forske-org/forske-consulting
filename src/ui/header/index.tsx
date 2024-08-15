@@ -12,7 +12,7 @@ export async function Header () {
     return (
         <header className={styles.container}>
             <Image className={styles.logo}
-                src={`${process.env.AUTH_URL}/logo.white.svg`}
+                src={`/logo.white.svg`}
                 alt='logo'
                 width={200}
                 height={200}/>
