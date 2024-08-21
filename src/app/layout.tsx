@@ -19,10 +19,18 @@ export const metadata: Metadata = {
         template: 'Forske | %s',
         default: 'Forske',
     },
+    description: 'Forske consulting services',
     icons: [
         { rel: 'icon', url: '/favicon.ico', },
     ],
-    description: 'Forske consulting services',
+    openGraph: {
+        title: {
+            template: 'Forske | %s',
+            default: 'Forske',
+        },
+        description: 'Forske consulting services',
+    },
+    keywords: [ 'Next.js', 'React', 'TypeScript', 'Forske' ],
 }
 
 export default function RootLayout({

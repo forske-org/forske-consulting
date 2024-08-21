@@ -11,22 +11,22 @@ export async function Header () {
 
     return (
         <header className={styles.container}>
-            <Image className={styles.logo}
-                src={`/logo.white.svg`}
-                alt='logo'
-                width={200}
-                height={200}/>
-            <div className={styles.title}>
-                <h1 className={styles.name}>FORSKE</h1>
-                <h4 className={styles.translation}><i>(research)</i></h4>
-                <h4 className={styles.meaning}>: to continue with examined care</h4>
-            </div>
+            <Link className={styles.brand} href='/'>
+                <Image className={styles.logo}
+                    src={`/logo.white.svg`}
+                    alt='logo'
+                    width={200}
+                    height={200}/>
+                <div className={styles.title}>
+                    <h1 className={styles.name}>FORSKE</h1>
+                    <h4 className={styles.translation}><i>(research)</i></h4>
+                    <h4 className={styles.meaning}>: to continue with examined care</h4>
+                </div>
+            </Link>
             <nav className={styles.navigator}>
-                <Link href='/contracts'>Contracts</Link>
-                <Link href='/calendar'>Calendar</Link>
-                <Link href='/meeting'>Meeting</Link>
+                <Link href='/solutions'>Solutions</Link>
+                <a href='https://docs.forske.org'>Documentation</a>
                 <Link href='/brand-guide'>Brand Guide</Link>
-                <Link href='/code-packages'>Code Packages</Link>
             </nav>
             {profile ? <Fragment>
                 <Image className={styles.profilePicture}
