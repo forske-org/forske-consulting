@@ -46,11 +46,11 @@ export async function getCalendarEvents (
         const calendars = await calendar.calendarList.list()
     
         const promises = calendars.data.items?.map(calendar =>
-            getEventsFromCalendar(calendar.id!, date)
+            getEventsFromCalendar(calendar.id!, date) 
         )
 
         if (promises) {
-            const events = await Promise.all(promises)
+            const events = await Promise.all(promises) as { data: { items: Calendar.Event[] }}[]
             let responseData: Calendar.Event[] = []
             for (const eventGroup of events) {
                 responseData.push(...eventGroup.data.items)

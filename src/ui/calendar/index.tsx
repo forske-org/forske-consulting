@@ -20,8 +20,8 @@ export function FetchCalendarEvents ({
     const startOfMonth = new Date(date.getFullYear(), date.getMonth(), 1)
     const endOfMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0)
 
-    const allDayEvents = events.filter(event => 'date' in event.start)
-    const timedEvents = events.filter(event => 'dateTime' in event.start)
+    const allDayEvents = events.filter(event => 'date' in event.start!)
+    const timedEvents = events.filter(event => 'dateTime' in event.start!)
 
     return (
         <Fragment>
@@ -57,25 +57,24 @@ export function FetchCalendarEvents ({
                 )} {Array.from({ length: endOfMonth.getDate() }).map((_, index) => {
                     const dayNumber = index + 1
                     const day = new Date(date.getFullYear(), date.getMonth(), dayNumber + 1)
-                    console.log(day)
                     return (
                         <div key={index} className={styles.day}>
                             <span>{dayNumber}</span>
                             <div>{events?.filter(event => {
-                                const eventStartDate = new Date(event.start.date ?? event.start.dateTime?.split('T')[0] ?? '')
-                                const eventEndDate = new Date(event.end.date ?? event.end.dateTime?.split('T')[0] ?? '')
+                                const eventStartDate = new Date(event.start?.date ?? event.start?.dateTime?.split('T')[0] ?? '')
+                                const eventEndDate = new Date(event.end?.date ?? event.end?.dateTime?.split('T')[0] ?? '')
                                 
                                 return eventStartDate <= day && day <= eventEndDate
-                            }).map(event => <span>{event.summary}</span>)}</div>
+                            }).map(event => <span key={event.id}>{event.summary}</span>)}</div>
                         </div>
                     )
                 })}
             </div>
 
             <div>
-                {events?.map(event => 
+                {/* {events?.map(event => 
                     <p>{JSON.stringify(event)}</p>
-                )}
+                )} */}
             </div>
         </Fragment>
     )

@@ -6,7 +6,7 @@ import { getCalendarEvents } from '@/data/google'
 
 export default async function Page ({
     searchParams: {
-        month,
+        month = `${new Date().getFullYear()}-${new Date().getMonth() + 1}`,
     }
 }: {
     searchParams: {
