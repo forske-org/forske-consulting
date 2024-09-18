@@ -9,9 +9,10 @@
     gap: 1em;
     padding-inline: 10dvw;
     height: 7em;
-    background: var(--primary);
     box-shadow: var(--foreground) 0 0 1em 0;
     color: rgb(var(--rgb-white));
+    background: var(--primary);
+    --rgb-primary: var(--rgb-white);
 
     img {
         border-radius: 50%;
@@ -60,7 +61,7 @@
     .profilePicture {
         position: absolute;
         border: 2px solid rgba(37,37,37,0.1);
-        background: rgb(var(--rgb-white));
+        background: rgb(var(--rgb-primary));
         box-shadow: var(--foreground) 0 0.2em 1em 0;
         top: calc(7em - 3em);
         right: clamp(2em, 20dvw, 10em);
@@ -69,7 +70,7 @@
     }
 
     .navigator {
-        grid-template-columns: repeat(5, auto);
+        grid-template-columns: repeat(8, auto);
         gap: 1.2em;
         padding-inline: 2em;
     }

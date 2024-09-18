@@ -1,16 +1,19 @@
 .button {
     background-color: transparent;
     background-image: linear-gradient(#fff, #f5f5fa);
-    border: 0 solid #003dff;
+    --rgb-primary: var(--rgb-rich-black);
+    border: 0 solid rgb(var(--rgb-primary));
     border-radius: 9999px;
-    box-shadow: rgba(37, 44, 97, .15) 0 4px 11px 0, rgba(93, 100, 148, .2) 0 1px 3px 0;
+    box-shadow: 
+        rgb(var(--rgb-primary),0.15) 0 4px 11px 0,
+        rgb(var(--rgb-primary),0.2) 0 1px 3px 0;
     box-sizing: border-box;
     color: #484c7a;
     cursor: pointer;
     display: inline-block;
     font-weight: 600;
-    margin: 4px;
-    padding: 16px 24px;
+    margin: 0.5em;
+    padding: 1em 1.5em;
     text-align: center;
     text-decoration: inherit;
     text-wrap: nowrap;
@@ -18,6 +21,8 @@
     transition-behavior: normal;
     white-space-collapse: collapse;
     line-height: 1.15;
+    max-width: 12em;
+    place-self: center;
 }
 
 @media (min-width: 576px) {
@@ -27,16 +32,19 @@
     }
 }
 
-.button:after, .button:before, .div-flex-items-center-justify-center:after, .div-flex-items-center-justify-center:before, .span-flex-items-center-h-16-w-auto-mr-8-py-2-flex-grow-0-flex-shrink-0-fill-current:after, .span-flex-items-center-h-16-w-auto-mr-8-py-2-flex-grow-0-flex-shrink-0-fill-current:before, .svg-block-h-full:after, .svg-block-h-full:before {
-    border: 0 solid #003dff;
+.button:after,
+.button:before {
+    border: 0 solid rgb(var(--rgb-primary));
     box-sizing: border-box;
 }
 
-.button-24:hover {
-    box-shadow: rgba(37, 44, 97, .15) 0 8px 22px 0, rgba(93, 100, 148, .2) 0 4px 6px 0;
+.button:hover {
+    box-shadow:
+        rgb(var(--rgb-primary),0.15) 0 8px 22px 0,
+        rgb(var(--rgb-primary),0.2) 0 4px 6px 0;
 }
 
-.button-24:disabled {
+.button:disabled {
     cursor: not-allowed;
     opacity: .5;
 }

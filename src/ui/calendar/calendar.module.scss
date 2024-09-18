@@ -1,0 +1,54 @@
+.wrapper {
+    width: 100%;
+    grid-template-columns: repeat(7, 1fr);
+    gap: -1;
+    place-self: start stretch;
+
+    button {
+        background: none;
+        border: none;
+        place-content: center;
+
+        &:hover {
+            font-weight: 600;
+            cursor: pointer;
+            background: rgb(0,0,0,0.05);
+        }
+    }
+
+    .previousYear { grid-column: 1; }
+    .previousMonth { grid-column: 2; }
+    .currentMonth { grid-column: 3 / 6; }
+    .nextMonth { grid-column: 6; }
+    .nextYear { grid-column: 7; }
+
+    .previousYear,
+    .previousMonth,
+    .currentMonth,
+    .nextMonth,
+    .nextYear,
+    .dayKey {
+        text-align: center;
+    }
+
+    .empty {
+        background: rgb(0,0,0,0.025);
+    }
+
+    .previousYear,
+    .previousMonth,
+    .currentMonth,
+    .nextMonth,
+    .nextYear,
+    .dayKey,
+    .day {
+        padding: 0.5em;
+        border: 0.2px solid rgb(0,0,0,0.05);
+    }
+
+    .day {
+        min-height: 5em;
+        grid-template: [row1-start] 'day' 'events' [row1-end] / auto 1fr;
+        gap: 0.5em;
+    }
+}

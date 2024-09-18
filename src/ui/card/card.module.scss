@@ -7,6 +7,10 @@
     padding: 1em 1.5em;
     place-items: center;
 
+    &:hover {
+        cursor: pointer;
+    }
+
     .title {
         font-size: 1.2em;
         grid-area: title;

@@ -14,3 +14,12 @@
         padding-inline: 1em;
     }
 }
+
+.contact {
+    font-size: 2rem;
+    padding: 1em;
+    border-radius: 0.5em;
+    color: rgb(var(--rgb-white));
+    background: var(--primary);
+    --rgb-primary: var(--rgb-white);
+}

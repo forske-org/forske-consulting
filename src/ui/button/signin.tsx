@@ -8,7 +8,7 @@ export async function Signin () {
             await signIn('google')
         }}>
             <button type='submit'>
-                <Symbol>login</Symbol>
+                <Symbol colour={'white'}>login</Symbol>
             </button>
         </form>
     )

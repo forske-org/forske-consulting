@@ -17,7 +17,7 @@ export function TextArea ({
     return (
         <div className={styles.container}>
             <label htmlFor={id} className={!label ? 'hidden' : ''}>{label}</label>
-            <textarea style={{ height: `2em` }}
+            <textarea style={{ height: `2em`, }}
                 id={id}
                 name={id}
                 onChange={handleChange}/>

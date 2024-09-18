@@ -4,18 +4,22 @@ import { clickHandler } from '@/types/actions'
 
 import styles from './button.module.scss'
 
-export function Symbol ({
+export function Button ({
     children,
-    handleClick,
+    handleClick = () => null,
+    type = 'button',
 }: {
     children: React.ReactNode
-    handleClick: clickHandler
+    handleClick?: clickHandler
+    type?: 'button' | 'reset'
 }) {
     return (
-        <button className={styles.button} onClickCapture={handleClick}>
+        <button type={type}
+            className={`${styles.button} ${styles[type]}`}
+            onClickCapture={handleClick}>
             {children}
         </button>
     )
 }
 
-export default Symbol
+export default Button

@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { auth } from '@/auth'
+import Signin from '@/ui/button/signin'
+import Signout from '@/ui/button/signout'
 
 import styles from './header.module.scss'
 
@@ -24,10 +26,14 @@ export async function Header () {
                 </div>
             </Link>
             <nav className={styles.navigator}>
+                <Link href='/services'>Services</Link>
                 <Link href='/solutions'>Solutions</Link>
                 <a href='https://docs.forske.org'>Documentation</a>
-                <Link href='/brand-guide'>Brand Guide</Link>
+                {profile ? <Link href='/brand-guide'>Brand Guide</Link> : null}
+                {profile ? <Link href='/calendar'>Calendar</Link> : null}
+                {profile ? <Link href='/meeting'>Meeting</Link> : null}
             </nav>
+            {profile ? <Signout /> : <Signin />}
             {profile ? <Fragment>
                 <Image className={styles.profilePicture}
                     src={profile.user?.image ?? ''}

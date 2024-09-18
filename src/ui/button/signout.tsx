@@ -8,7 +8,7 @@ export async function Signout () {
             await signOut()
         }}>
             <button type='submit'>
-                <Symbol>logout</Symbol>
+                <Symbol colour={'white'}>logout</Symbol>
             </button>
         </form>
     )

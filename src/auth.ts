@@ -34,10 +34,18 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                 '/meeting',
                 '/calendar',
                 '/contracts',
+                '/brand-guide',
             ].includes(pathname)) return !!auth
             return true
         },
-        async jwt({ token, user, account, profile, }) {
+        async signIn({ profile }) {
+            if (profile) {
+                const admin = process.env.AUTH_ADMIN?.split(',').includes(`${profile.email}`)
+                return admin ? true : false
+            }
+            return false
+        },
+        async jwt({ token, user, account, }) {
             if (account && user) {
                 return {
                     ...token,

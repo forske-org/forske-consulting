@@ -81,4 +81,10 @@ html {
 body {
     color: var(--foreground);
     background: var(--background);
+
+    * {
+        background: none;
+        border: none;
+        color: rgb(var(--rgb-primary));
+    }
 }
